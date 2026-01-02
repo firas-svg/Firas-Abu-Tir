@@ -1,0 +1,5 @@
+{
+  "name": "Flappy React Bird",
+  "description": "An endless runner game clone featuring pixel-perfect CSS styling, smooth physics, and responsive gameplay.",
+  "requestFramePermissions": []
+}

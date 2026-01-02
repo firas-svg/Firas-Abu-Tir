@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Flappy React Bird</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#25aff4",
+              "background-light": "#f5f7f8",
+              "background-dark": "#101c22",
+              "sky-start": "#4ec0ca",
+              "sky-end": "#87d4db",
+              "ground-top": "#73bf2e",
+              "ground-border": "#589c1f",
+              "ground-base": "#ded895",
+            },
+            fontFamily: {
+              "display": ["Space Grotesk", "sans-serif"]
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        overscroll-behavior: none;
+        touch-action: none;
+      }
+      .shake {
+        animation: shake 0.4s cubic-bezier(.36,.07,.19,.97) both;
+      }
+      @keyframes shake {
+        10%, 90% { transform: translate3d(-1px, 1px, 0); }
+        20%, 80% { transform: translate3d(2px, -2px, 0); }
+        30%, 50%, 70% { transform: translate3d(-4px, 4px, 0); }
+        40%, 60% { transform: translate3d(4px, -4px, 0); }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+</head>
+  <body class="bg-background-dark font-display antialiased overflow-hidden select-none">
+    <div id="root"></div>
+  </body>
+</html>
